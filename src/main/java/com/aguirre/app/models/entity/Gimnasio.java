@@ -54,6 +54,17 @@ public class Gimnasio {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) {
+			return true;
+		}
+		if (obj == null || obj.getClass() != this.getClass()) {
+			return false;
+		}
+
+		Gimnasio gimnasio = (Gimnasio) obj;
+		return this.id == gimnasio.getId();
+	}
 }

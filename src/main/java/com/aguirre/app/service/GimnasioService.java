@@ -16,4 +16,5 @@ public interface GimnasioService {
 	void eliminarPorId(Long id);
 	
 	List<Gimnasio> obtenerTodo();
+	List<Gimnasio> encontrarCoincidenciaPorNombre(String nombre);
 }

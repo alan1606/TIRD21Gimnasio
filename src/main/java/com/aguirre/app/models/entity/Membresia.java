@@ -26,10 +26,10 @@ public class Membresia {
 	@Column(name = "fecha_fin")
 	private LocalDate fechaFin;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Persona persona;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Tipo tipo;
 
 	public Long getId() {

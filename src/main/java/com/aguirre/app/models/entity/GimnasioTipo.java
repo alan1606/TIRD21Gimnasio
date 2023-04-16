@@ -17,17 +17,15 @@ public class GimnasioTipo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Gimnasio gimnasio;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Tipo tipo;
 	
 	private Boolean activo;
 
-	
-	
-	
+
 	
 	public Long getId() {
 		return id;

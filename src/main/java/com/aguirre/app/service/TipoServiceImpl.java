@@ -1,5 +1,6 @@
 package com.aguirre.app.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,11 @@ implements TipoService
 	public Optional<Tipo> buscarPorId(Long id) {
 		return repository.findById(id);
 	}
-	
-	
+
+	@Override
+	public List<Tipo> obtenerTodo() {
+		return (List<Tipo>) repository.findAll();
+	}
+
+
 }

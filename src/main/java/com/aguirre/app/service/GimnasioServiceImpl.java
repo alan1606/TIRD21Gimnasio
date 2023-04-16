@@ -43,6 +43,11 @@ implements GimnasioService{
 	public List<Gimnasio> obtenerTodo() {
 		return (List<Gimnasio>) repository.findAll();
 	}
-	
+
+	@Override
+	public List<Gimnasio> encontrarCoincidenciaPorNombre(String nombre) {
+		return repository.encontrarCoincidenciaPorNombre(nombre);
+	}
+
 
 }

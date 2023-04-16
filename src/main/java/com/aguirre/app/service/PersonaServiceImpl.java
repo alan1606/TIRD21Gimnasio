@@ -1,5 +1,6 @@
 package com.aguirre.app.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,11 @@ implements PersonaService{
 	@Override
 	public Optional<Persona> buscarPorId(Long id) {
 		return repository.findById(id);
+	}
+
+	@Override
+	public List<Persona> obtenerTodo() {
+		return (List<Persona>) repository.findAll();
 	}
 
 }

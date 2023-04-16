@@ -1,5 +1,7 @@
 package com.aguirre.app.service;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,21 @@ implements MembresiaService
 	@Override
 	public void eliminarPorId(Long id) {
 		repository.deleteById(id);
+	}
+
+	@Override
+	public List<Membresia> obtenerTodo() {
+		return (List<Membresia>) repository.findAll();
+	}
+
+	@Override
+	public List<Membresia> encontrarMembresiasActivasEnFecha(LocalDate fecha) {
+		return repository.encontrarMembresiasActivasEnFecha(fecha);
+	}
+
+	@Override
+	public List<Membresia> encontrarMembresiasActivasEnFechaYPersona(LocalDate fecha, Long personaId) {
+		return repository.encontrarMembresiasActivasEnFechaYPersona(fecha,personaId);
 	}
 
 }
